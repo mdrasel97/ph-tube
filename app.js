@@ -28,8 +28,8 @@ const videosDisplay = (videos) => {
     div.innerHTML = `
     <div class="card bg-base-100">
                 <figure class="relative">
-                  <img
-                    src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                  <img class="w-full h-[180px]"
+                    src="${video.thumbnail}"
                     alt="" />
                     <p class="bg-black text-white absolute px-3 rounded-md bottom-2 right-2">3hrs 56 min ago</p>
                 </figure>
@@ -41,7 +41,7 @@ const videosDisplay = (videos) => {
                         </div>
                       </div>
                       <div class="space-y-2">
-                        <h2 class="text-2xl font-semibold"> amar sonar bangla</h2>
+                        <h2 class="text-xl font-semibold">${video.title}</h2>
                         <p class="flex items-center gap-1 text-gray-500">
                             awlad hossain
                             <img class="w-5 h-5" src="https://img.icons8.com/?size=96&id=98A4yZTt9abw&format=png" alt="">
