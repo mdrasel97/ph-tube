@@ -37,16 +37,16 @@ const videosDisplay = (videos) => {
                   <div class="flex gap-3 py-5 pl-2">
                     <div class="avatar w-8 h-8">
                         <div class="ring-primary ring-offset-base-100 rounded-full ring ring-offset-2">
-                          <img class="px-0 " src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                          <img class="px-0 " src="${video.authors[0].profile_picture}" />
                         </div>
                       </div>
                       <div class="space-y-2">
                         <h2 class="text-xl font-semibold">${video.title}</h2>
                         <p class="flex items-center gap-1 text-gray-500">
-                            awlad hossain
+                            ${video.authors[0].profile_name}
                             <img class="w-5 h-5" src="https://img.icons8.com/?size=96&id=98A4yZTt9abw&format=png" alt="">
                         </p>
-                        <p class="text-gray-500">91K views</p>
+                        <p class="text-gray-500">${video.others.views}</p>
                       </div>
                   </div>
                   <div class="flex gap-3">
