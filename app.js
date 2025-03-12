@@ -4,27 +4,39 @@
 //     loaderBtn.classList.remove('hidden')
 // }
 
+const categoryLoad = () =>{
+    fetch('https://openapi.programming-hero.com/api/phero-tube/categories')
+    .then(Response => Response.json())
+    .then(data =>{
+        categoryDisplay(data.categories)
+    })
+}
 
-// const categoryload = () =>{
-//     fetch('https://openapi.programming-hero.com/api/phero-tube/categories')
-//     .then(Response => Response.json())
-//     .then(data =>{
-//         // console.log(data)
+const videoLoad = ()=>{
+    fetch('https://openapi.programming-hero.com/api/phero-tube/videos')
+    .then(Response =>Response.json())
+    .then(data=>{
+        videosDisplay(data)
+    })
+}
 
-//        categoriesData(data.categories)
-//     })
-// }
+const videosDisplay = ()=>{
 
-// const categoriesData = (categories) =>{
-    
-//     const categoriesContainer = document.getElementById('category-container');
-//     for(let categorie of categories){
-//         // console.log(categorie)
-//         const div = document.createElement('div');
-//         div.innerHTML = `
-//         <button class="btn bg-red-100 hover:bg-red-600 hover:text-white">${categorie.category}</button>
-//         `
-//         categoriesContainer.appendChild(div)
-//     }
-// }
-// categoryload()
+}
+
+const categoryDisplay = (categories)=>{
+    const categoryContainer = document.getElementById('category-container');
+    for(let category of categories){
+        const categoryDiv = document.createElement('div');
+        categoryDiv.innerHTML = `
+        <div>
+            <button class="btn bg-gray-200 text-gray-500 hover:bg-red-600 hover:text-white">${category.category}</button>
+        </div>
+        `
+        categoryContainer.appendChild(categoryDiv)
+    }
+}
+
+
+categoryLoad()
+videoLoad()
